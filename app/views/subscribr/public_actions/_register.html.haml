@@ -1,0 +1,14 @@
+= form_for @subscription, :validate => true, :url => send_subscription_path, :html => {:class => 'form-horizontal'} do |f|
+  %fieldset
+    %legend Subscribe Here
+    .control-group
+      = f.label :name, :class => 'control-label'
+      .controls
+        = f.text_field :name
+        %p.help-block Full Name is required
+    .control-group
+      = f.label :email, :class => 'control-label'
+      .controls
+        = f.text_field :email
+        %p.help-block Valid Email Address Required
+    .form-actions= f.submit 'Subscribe', :class => 'btn btn-primary'

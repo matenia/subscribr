@@ -1,7 +1,8 @@
 = Subscribr :: IN DEVELOPMENT - NOT TO BE USED YET .. ::
 
 == Purpose
-This is a small engine I made for personal use, but decided to open source it if anyone's interested.
+
+This is a small engine I have put together for personal use, but decided to open source it if anyone's interested.
 I have created many sites that needed a subscribe to mailing list managed in-house and finally decided to turn it into an engine!
 It's my first attempt so please be kind.
 
@@ -10,5 +11,14 @@ Basically, it's an easy way to manage your own email database.
 == Setup
 
 subscribr:install:migrations, subscribr:install:assets
+
+== App Requirements
+
+Ensure you have a root route in your application
+
+== TODO
+
+* TESTS!!!
+* Finish all the things!!!111one
 
 This project rocks and uses MIT-LICENSE.

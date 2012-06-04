@@ -1,0 +1,6 @@
+.hero-unit.span6.offset2
+  %h1 Success!
+  %h2
+    = @subscription.email
+    has been added to our mailing list
+  = link_to "Back To the main site", main_app.root_url, :class => 'btn btn-inverse btn-large pull-right'

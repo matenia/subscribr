@@ -6,7 +6,12 @@ module Subscribr
     end
     
     def submit_registration
-      render :text => params.inspect
+      @subscription = Subscription.new(params[:subscription])
+      if @subscription.save!
+        render :action => 'thanks'
+      else
+        render :action => 'register'
+      end
     end
     
     def thanks

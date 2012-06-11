@@ -1,0 +1,8 @@
+en:
+  activerecord:
+    errors:
+      models:
+        subscribr/subscription:
+          attributes:
+            email:
+              email_format: Invalid Email Address Format

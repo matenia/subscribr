@@ -2,11 +2,13 @@ module Subscribr
   class Subscription < ActiveRecord::Base
     attr_accessible :email, :name, :status
     validates_presence_of :status, :default => 'pending'
+    validates_uniqueness_of :email
     validates :email, :email_format => true
+    validates_presence_of :email
     before_validation :set_status
 
-    
     class << self
+
       def statuses
         ['pending','active','removed']
       end
@@ -18,10 +20,10 @@ module Subscribr
           end
         end
       end
-      
+
     end
 
-    private
+  private
     
     def set_status
       self.status ||= 'pending'

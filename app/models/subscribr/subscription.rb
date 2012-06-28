@@ -1,6 +1,7 @@
 module Subscribr
   class Subscription < ActiveRecord::Base
     attr_accessible :email, :name, :status
+    validates_presence_of :name
     validates_presence_of :status, :default => 'pending'
     validates_uniqueness_of :email
     validates :email, :email_format => true
